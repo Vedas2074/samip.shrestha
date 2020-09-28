@@ -7,7 +7,7 @@ class Method
     {
         Console.WriteLine("Printing something...");
         Multiply(23.22f, 224.55f);
-        Multiply(23.22f, 224.55f, 50.55f);
+        Multiply(23.22f, 22.55f, 5.55f);
         Sum(2.3, 45.5, 20.6);
         Greet("Samip", "Hi");
         Greet("Samip");
@@ -15,7 +15,7 @@ class Method
         (byte Min, byte Max) result = FindMinMax(numbers);
         //(_, byte Max) result = FindMinMax(numbers);
         //named arguments
-        PrintCustomerDetails(age:24, name: "Samip", isMale: true);
+        PrintCustomerDetails(age:24, name: "Samip", isMale: true, address: "latipur");
     }
     
     void PrintSomething(string message)
@@ -28,7 +28,7 @@ class Method
         return product;
     }
 
-    float Multiply(float firstNum, float secondNum, flaot thirdNum)//funcion overloading,
+    float Multiply(float firstNum, float secondNum, float thirdNum)//funcion overloading,
     {
         float product = firstNum * secondNum+thirdNum;
         return product;
@@ -37,7 +37,7 @@ class Method
     //variables number of arguments
     double Sum(params double[] numbers)
     { 
-        double num = 0;
+        double sum = 0;
         foreach (double num in numbers)
         {
             sum = sum + num;
@@ -62,10 +62,10 @@ class Method
 
     void PrintCustomerDetails(string name, string address, byte age, bool isMale)
     {
-        Console.WriteLine($"{name}, {address}, [{age}]")";
+        Console.WriteLine($"{name}, {address}, [{age}]");
     }
 
     //Expression bodied method syntax
-    float Subtract(float firstNum, float secondNum) ->firstNum - secondNum;
+    float Subtract(float firstNum, float secondNum) =>firstNum - secondNum;
 
 }
