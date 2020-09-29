@@ -1,6 +1,8 @@
 using System;
 using System.Linq;
 
+namespace AccessModifierAndMethods
+{
 class Method
 {
     void PrintInfo()
@@ -68,4 +70,5 @@ class Method
     //Expression bodied method syntax
     float Subtract(float firstNum, float secondNum) =>firstNum - secondNum;
 
+}
 }
