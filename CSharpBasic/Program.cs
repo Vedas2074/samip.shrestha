@@ -1,5 +1,6 @@
 ﻿using System;
 using AccessModifierAndMethods;
+using LearningClasses;
 namespace CSharpBasics
 {
     class Program
@@ -12,13 +13,19 @@ namespace CSharpBasics
             //SelectionStatement selectionStatement = new SelectionStatement();
             //selectionStatement.LearnIfElse();
             //selectionStatement.LearnSwitchCases();      
-            AccessModifier accessModifier = new AccessModifier();
-            accessModifier.DoSomething();
-            Person person = new Person();
-            person.name = "Bishnu";
-            person.Age = 17;
-            var x = person.Age;
-            var y = person.Address;
+            //AccessModifier accessModifier = new AccessModifier();
+            //accessModifier.DoSomething();
+            //Person person = new Person();
+            //person.name = "Bishnu";
+            //person.Age = 17;
+            //var x = person.Age;
+            //var y = person.Address;
+            var person1 = new Person();
+            person1.Name = "Samip";
+            person1.Address = "Lalitpur";
+            person1.Age = 21;
+
+            var person2 = new Person("Samip", "Ktm",23);
         }
     }
 }

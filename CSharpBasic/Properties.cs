@@ -1,4 +1,4 @@
-class Person
+class Human
 {
     internal string name;
     byte age = 23;
@@ -19,7 +19,7 @@ class Person
     //Autoimplemeted property
     public string Name { get; set; }//private set yo class le matra use garna lai
     //Readonly property
-    public string Address { get; }
+    public string Address { get; set;}
 
 
 }
