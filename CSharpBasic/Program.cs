@@ -26,6 +26,18 @@ namespace CSharpBasics
             person1.Age = 21;
 
             var person2 = new Person("Samip", "Ktm",23);
+            var x = Person.Scientificname;
+            Person.Do();
+            var y = Math.Sqrt(5); 
+            var z = Calculator.Sum(21,25);
+            var s = Calculator.Sum<int>(21,25);
+            var s1 = Calculator.Sum<decimal>(21.56545m,25.565m);
+             Rectangle rectangle = new Rectangle();
+        rectangle.Length = 23.6;
+        rectangle.Breadth = 6.32;
+        var result = rectangle.GetArea();
+
+
         }
     }
 }
