@@ -1,43 +1,35 @@
-﻿using System;
-using AccessModifierAndMethods;
-using LearningClasses;
-namespace CSharpBasics
+﻿using LearningClasses;
+using System;
+
+class Program
 {
-    class Program
-    {
-        static void Main()
-        {
-            //Console.Write("Enter your name:");
-            //string name = Console.ReadLine();
-            //Console.Write("Hi," + name);
-            //SelectionStatement selectionStatement = new SelectionStatement();
-            //selectionStatement.LearnIfElse();
-            //selectionStatement.LearnSwitchCases();      
-            //AccessModifier accessModifier = new AccessModifier();
-            //accessModifier.DoSomething();
-            //Person person = new Person();
-            //person.name = "Bishnu";
-            //person.Age = 17;
-            //var x = person.Age;
-            //var y = person.Address;
-            var person1 = new Person();
-            person1.Name = "Samip";
-            person1.Address = "Lalitpur";
-            person1.Age = 21;
+    static void Main()
+    {       
+        // var person1 = new Person("Bishnu", "Ktm");
+        // var person2 = new Person("Ramesh", "Bhaktapur", 23);
+        // var person3 = new Person("Rame", "Bhaktapur", 20);
 
-            var person2 = new Person("Samip", "Ktm",23);
-            var x = Person.Scientificname;
-            Person.Do();
-            var y = Math.Sqrt(5); 
-            var z = Calculator.Sum(21,25);
-            var s = Calculator.Sum<int>(21,25);
-            var s1 = Calculator.Sum<decimal>(21.56545m,25.565m);
-             Rectangle rectangle = new Rectangle();
-        rectangle.Length = 23.6;
-        rectangle.Breadth = 6.32;
-        var result = rectangle.GetArea();
+        // var person4 = new Person();
 
+        // // Accessing static members
+        // var x = Person.ScientificName;
+        // Person.Do();
+        // var y = Math.Sqrt(342);
 
-        }
+        // var s1 = Calculator.Sum<int>(23, 34);
+        // var s2 = Calculator.Sum<decimal>(233443.23m, 34344656.1m);
+
+                
+        // Inheritance examples
+        Shape r = new Rectangle(23.6, 6.32);
+        Rectangle r1 = new Rectangle(278.6, 61.32);
+        r.PrintDetails();
+        r1.PrintDetails();
+
+        Shape s = new Square(34.5);        
+        s.PrintDetails();
+
+        Shape c = new Circle(23.4);
+        c.PrintDetails();
     }
 }
