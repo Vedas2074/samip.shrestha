@@ -21,10 +21,11 @@ class Program
 
                 
         // Inheritance examples
-        Shape r = new Rectangle(23.6, 6.32);
-        Rectangle r1 = new Rectangle(278.6, 61.32);
+        var r = new Rectangle(23.6, 6.32);
+        var r1 = new Rectangle(278.6, 61.32);
         r.PrintDetails();
         r1.PrintDetails();
+        r1.GetDiagoalLength();
 
         Shape s = new Square(34.5);        
         s.PrintDetails();
