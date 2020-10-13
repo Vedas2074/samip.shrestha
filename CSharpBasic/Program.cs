@@ -1,5 +1,6 @@
 ﻿using LearningClasses;
 using System;
+using FileDirectoryHandling;
 
 class Program
 {
@@ -20,17 +21,25 @@ class Program
         // var s2 = Calculator.Sum<decimal>(233443.23m, 34344656.1m);
 
                 
-        // Inheritance examples
-        var r = new Rectangle(23.6, 6.32);
-        var r1 = new Rectangle(278.6, 61.32);
-        r.PrintDetails();
-        r1.PrintDetails();
-        r1.GetDiagoalLength();
+        // Inheritance examples//behaviours-->Method
+        // var r = new Rectangle(23.6, 6.32);
+        // var r1 = new Rectangle(278.6, 61.32);
+        // r.PrintDetails();
+        // r1.PrintDetails();
+        // r1.GetDiagoalLength();
 
-        Shape s = new Square(34.5);        
-        s.PrintDetails();
+        // Shape s = new Square(34.5);        
+        // s.PrintDetails();
 
-        Shape c = new Circle(23.4);
-        c.PrintDetails();
+        // Shape c = new Circle(23.4);
+        // c.PrintDetails();
+
+        FileIO file = new FileIO();
+        //file.LearnFileReading();
+        //file.LearnFileWriting();
+        //file.LearnFileInfo();
+        //file.LearnDirectory();
+        file.LearnDirectoryInfo();
+
     }
 }

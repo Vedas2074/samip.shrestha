@@ -74,6 +74,8 @@ class C : B
 {
 }
 
+//Class- Is-a relaionship, Interface -Has-a relationship
+
 class D: A, IX, IY
 {
 }
