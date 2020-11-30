@@ -7,7 +7,7 @@ namespace FileDirectoryHandling
     {
         public void LearnFileReading()
         {
-            string fileContent = File.ReadAllText(@"C:\xampp\htdocs\samip.shrestha");//verveting character
+            string fileContent = File.ReadAllText(@"C:\xampp\htdocs\samip.shrestha");//@ is Verbatim Character
             Console.WriteLine(fileContent);
         }
         public void LearnFileWriting()
