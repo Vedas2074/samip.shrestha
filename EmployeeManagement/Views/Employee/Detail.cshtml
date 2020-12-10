@@ -1,0 +1,13 @@
+@model Employee
+@{
+    ViewData["Title"] = Model.FirstName;
+}
+<h2> @Model.FirstName's Deail</h2>
+<ul class="list-group list-group-flush">
+  <li class="list-group-item">FirstName: @Model.FirstName</li>
+  <li class="list-group-item">LastName: @Model.LastName</li>
+  <li class="list-group-item">Address: @Model.Address</li>
+  <li class="list-group-item">Age: @Model.Age</li>
+  <li class="list-group-item">Salary: @Model.Salary</li>
+  <a class="btn btn-primary col-2 mt-3" href="/employee/index"> Back to Employee List</a>
+</ul>

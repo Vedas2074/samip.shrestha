@@ -1,4 +1,10 @@
 @model List<Employee>;
+  @{
+    Layout = "_Layout";
+  }
+  @{
+    ViewData["Title"] = "Employee List";
+}
 <h1>List of Employees</h1>
     <table class="table table-striped">
   <thead>
@@ -16,7 +22,8 @@
    <tbody>
     <tr>
       <th scope="row">@employee.Id</th>
-      <td>@employee.FirstName</td>
+      <td><a href="/employee/detail?id=@employee.Id">
+      @employee.FirstName</a></td>
       <td>@employee.LastName</td>
       <td>@employee.Address</td>
       <td>@employee.Age</td>
