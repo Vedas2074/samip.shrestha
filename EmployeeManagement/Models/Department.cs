@@ -4,9 +4,11 @@ namespace EmployeeManagement.Models{
 
 public class Department{
     public int Id { get;set;}
-    [Required(ErrorMessage="We need your FirstName")]
+    [Required(ErrorMessage="Department Name is required")]
     public string Name { get;set;}
     public int Code { get; set;}
+    
+    [Required(ErrorMessage="Branch is required")]
     public string Branch { get; set;}
     
          public static List<Department> GetDepartment()
