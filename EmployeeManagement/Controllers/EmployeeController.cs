@@ -17,9 +17,16 @@ namespace EmployeeManagement.Controllers{
             var employee=employees.FirstOrDefault(x=>x.Id==Id);
             return View(employee);
         }
+        [HttpGet]//default ma hunxa
         public ActionResult Create()
         {
             return View();
+        }
+
+        [HttpPost]
+         public string Create(Employee employee)
+        {
+            return "Record save";
         }
     }
 }

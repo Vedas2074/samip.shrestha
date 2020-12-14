@@ -1,0 +1,40 @@
+@model Department
+
+      <div class="container-fluid">
+        <div class="row">
+          <!-- left column -->
+          <div class="col-md-8">
+            <!-- general form elements -->
+            <div class="card card-primary">
+              <div class="card-header">
+                <h3 class="card-title">Create</h3>
+              </div>
+              <!-- /.card-header -->
+              <!-- form start -->
+              <form asp-controller="Employee" asp-action="Create" method="POST">
+                <div class="card-body">
+                    <div class="col-md-6 form-group"><!--asp-for tag helper-->
+                    <label asp-for="Name">Name</label>
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                          <input asp-for="Name" name = "name" class="form-control" type="text" placeholder="Enter Name">      
+                  </div>
+                    <div class="col-md-6 form-group">
+                    <label asp-for="Branch"> Branch</label>
+                    <span asp-validation-for="Branch" class="text-danger"></span>
+                          <input asp-for="Branch" name = "branch" class="form-control" type="text" placeholder="Enter LastName" required>      
+                  </div>
+                  <div class="col-md-6 form-group">
+                    <label asp-for="Code"> Code</label>
+                          <input asp-for="Code" name = "code" class="form-control" type="text" placeholder="Enter code" required>  
+                          
+                  </div>
+  
+                </div>
+                <div class="card-footer">
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+              </form>
+            </div>
+            <!-- /.card -->
+
+            

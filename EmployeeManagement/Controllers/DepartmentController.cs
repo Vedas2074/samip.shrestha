@@ -1,6 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
 using EmployeeManagement.Models;
 using System.Collections.Generic;
+using System.Linq;
+
 
 namespace EmployeeManagement.Controllers
 {
@@ -8,25 +10,25 @@ namespace EmployeeManagement.Controllers
     {
         public IActionResult Index()
         {   
-            Department department1 = new Department()
-            {
-                Id =1,
-                Name = "Abc",
-                Code =5464, 
-                Branch = "Ktm",
+           var departments = Department.GetDepartment();
+            return View(departments); 
+        }
+          public ActionResult Detail(int Id)
+        {
+            var departments = Department.GetDepartment();
+            var department=departments.FirstOrDefault(x=>x.Id==Id);
+            return View(department);
+        }
+        [HttpGet]//default ma hunxa
+        public ActionResult Create()
+        {
+            return View();
+        }
 
-            };
-            Department department2 = new Department()
-            {
-                Id = 2,
-                Name = "Eda",
-                Code =5464, 
-                Branch = "Ktm",
-
-
-            };
-            List<Department> departments =new List<Department>(){department1,department2};
-            return View(departments);
+        [HttpPost]
+         public string Create(Department department)
+        {
+            return "Record save";
         }
     }
 }
